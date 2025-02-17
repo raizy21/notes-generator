@@ -1,0 +1,9 @@
+function App() {
+  return (
+    <>
+      <h1 className="btn btn-primary text-4xl">test</h1>
+    </>
+  );
+}
+
+export default App;
