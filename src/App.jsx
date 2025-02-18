@@ -1,8 +1,14 @@
+import NoteContextProvider from "./context/NoteContextProvider";
+
+import AddNote from "./components/AddNote";
+import NoteList from "./components/NoteList";
+
 function App() {
   return (
-    <>
-      <h1 className="btn btn-primary text-4xl">test</h1>
-    </>
+    <NoteContextProvider>
+      <AddNote />
+      <NoteList />
+    </NoteContextProvider>
   );
 }
 
