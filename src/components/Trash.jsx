@@ -1,4 +1,4 @@
-const Trash = () => {
+const Trash = ({ onClick }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,7 +6,11 @@ const Trash = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-5 mt-2 ml-2 text-tertiary"
+      className="size-5 mt-2 ml-2 text-tertiary cursor-pointer"
+      onClick={onClick}
+      role="button"
+      tabIndex="0"
+      aria-label="Delete Note"
     >
       <path
         strokeLinecap="round"

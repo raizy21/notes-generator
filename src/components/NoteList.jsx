@@ -1,16 +1,26 @@
-import { useNotes } from "../context/context";
-import NoteItem from "./NoteItem";
+import { useNotes } from "../context/context"; //context for notes
+import NoteItem from "./NoteItem"; // item note
 
 const NoteList = () => {
-  const { notes } = useNotes();
-  const listNotes = notes.filter((note) => {
-    // Use the note variable or add a condition to filter notes
-    return note; // Example: return note.title.includes('keyword');
-  });
+  const { notes } = useNotes(); // set context
+
+  // console.log("notes:", notes);
+
+  // if empty
+  if (!Array.isArray(notes)) {
+    return <p>Error: Notes are empty.</p>;
+  }
+
+  //if empty
+  if (notes.length === 0) {
+    return (
+      <p className="text-center text-primary">No notes available. Add one!</p>
+    );
+  }
 
   return (
     <ul>
-      {listNotes.map((note) => (
+      {notes.map((note) => (
         <NoteItem key={note.id} note={note} />
       ))}
     </ul>

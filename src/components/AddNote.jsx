@@ -1,20 +1,17 @@
-import { useState } from "react";
-import { useNotes } from "../context/context";
+import { useState } from "react"; //useState
+import { useNotes } from "../context/context"; //context for notes
 
 const AddNote = () => {
-  const { setNotes } = useNotes();
-  const [newNote, setNewNote] = useState("");
+  const { addNote } = useNotes(); //addNote from context
+  const [newNote, setNewNote] = useState(""); // state for new notes
 
+  //submit handler form
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!newNote) return;
+    e.preventDefault(); //prevent default
+    if (!newNote.trim()) return; // prevent adding empty notes
 
-    setNotes((prevNotes) => {
-      const newState = [{ id: Date.now(), text: newNote }, ...prevNotes];
-      localStorage.setItem("notes", JSON.stringify(newState));
-      return newState;
-    });
-    setNewNote("");
+    addNote({ id: Date.now(), text: newNote }); // add a notes
+    setNewNote(""); // clear input after adding
   };
 
   return (
