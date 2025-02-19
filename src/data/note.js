@@ -72,6 +72,6 @@ export const notes = [
     title: "Problem Solving",
     img: "https://cdn.prod.website-files.com/6421c69c26daff7aacff565e/661e8c8219324d8dbb851e45_Problem-Solving%20Skills%20Training.webp",
     content:
-      "React-ing to React means embracing the power of this JavaScript library for building dynamic user interfaces. With its component-based structure, fast rendering, and state management, React simplifies web development. Whether you're a beginner or an expert, React keeps evolving, making every interaction smoother and more efficient.",
+      "Problem-solving is the ability to analyze a challenge, break it down into manageable parts, and develop effective solutions. It requires critical thinking, creativity, and adaptability. The best approach involves identifying the root cause, exploring different strategies, and testing possible solutions. Whether in coding, business, or everyday life, strong problem-solving skills help in overcoming obstacles efficiently and making informed decisions. The key is to stay patient, think logically, and embrace challenges as opportunities for growth.",
   },
 ];
