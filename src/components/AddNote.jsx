@@ -24,10 +24,7 @@ const AddNote = () => {
         placeholder="Add a new note"
         className="flex-1 border-tertiary border-4 rounded px-2 py-1 mr-2 bg-secondary text-tertiary"
       />
-      <button
-        type="submit"
-        className="bg-primary  px-4 py-2 rounded text-tertiary"
-      >
+      <button type="submit" className="btn  px-4 py-2 rounded text-primary">
         Add Note
       </button>
     </form>

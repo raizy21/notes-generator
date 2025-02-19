@@ -4,12 +4,6 @@ import Home from "./pages/Home"; //import Home
 import NotFound from "./pages/NotFound"; // Import NotFound
 import EditNotes from "./pages/EditNotes"; // Import EditNotes
 
-// import NoteContextProvider from "./context/NoteContextProvider"; //context provider
-
-// import AddNote from "./components/AddNote"; //add note
-// import NoteList from "./components/NoteList"; // note list
-// import { Toaster } from "react-hot-toast"; //tost for feedback
-
 function App() {
   return (
     <Router>
@@ -21,7 +15,7 @@ function App() {
           {/* Home Route */}
           <Route index element={<Home />} />
           {/* EditNotes Route */}
-          <Route path="editnotes" element={<EditNotes />} />
+          <Route path="edit" element={<EditNotes />} />
         </Route>
         <Route path="*" element={<NotFound />} />
         {/* NotFound Route */}
@@ -31,11 +25,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <NoteContextProvider>
-       <Toaster position="top-right" />
-       <AddNote />
-       <NoteList />
-     </NoteContextProvider> */
-}
