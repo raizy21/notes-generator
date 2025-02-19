@@ -3,7 +3,7 @@ import { useNotes } from "../context/context"; //context for notes
 
 const AddNote = () => {
   const { addNote } = useNotes(); //addNote from context
-  const [newNote, setNewNote] = useState(""); // state for new notes
+  const [newNote, setNewNote] = useState(); // state for new notes
 
   //submit handler form
   const handleSubmit = (e) => {
