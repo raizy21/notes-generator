@@ -9,7 +9,7 @@ const NoteItem = ({ note }) => {
 
   return (
     <li className="flex items-center mb-2">
-      <p className="text-primary ml-2 mt-2">{note.text}</p>
+      <p className="text-primary ml-2 mt-2">{note.title}</p>
       <Pen
         note={note}
         onClick={() => {
