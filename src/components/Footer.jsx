@@ -8,7 +8,7 @@ import United from "./footer/United";
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-primary  m-[auto] sm:ml-0 sm:h-[5rem] sm:flex sm:flex-row sm:justify-between">
+      <div className="bg-accent  m-[auto] sm:ml-0 sm:h-[7rem] sm:flex sm:flex-row sm:justify-between">
         <FooterText />
 
         <div className="flex sm:flex-row  sm:h-[5rem] justify-center   ">
