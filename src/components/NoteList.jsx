@@ -20,9 +20,12 @@ const NoteList = () => {
 
   return (
     <ul>
-      {notes.map((note) => (
-        <NoteItem key={note.id} note={note} />
-      ))}
+      {notes
+        .slice()
+        .reverse()
+        .map((note) => (    // reverse notes before rendering
+          <NoteItem key={note.id} note={note} />
+        ))}
     </ul>
   );
 };

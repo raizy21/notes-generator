@@ -18,8 +18,10 @@ const Home = () => {
   useEffect(() => {
     initializeNotes(); // ensure localStorage is initialized
     const storedNotes = getNotes(); // get stored notes
+    //reverse the array
+
     // console.log("loaded Notes from Storage:", storedNotes);
-    setNoteList(storedNotes);
+    setNoteList(storedNotes.reverse()); // store reverse the array
   }, []);
 
   return (

@@ -30,7 +30,7 @@ const AddNote = () => {
       img: imgTextNote,
       content: newTextNote,
     }); // add a notes
-    setTitleTextNode(""); // clear title input after submission
+    setTitleTextNote(""); // clear title input after submission
     setImgTextNote(""); // clear img input after submission
     setTextNewNote(""); // clear text input after submission
   };

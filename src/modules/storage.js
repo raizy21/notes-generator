@@ -29,7 +29,7 @@ export const saveNotes = (notesData) => {
 };
 
 /**
- * Iinitialize localStorage with default notes if empty.
+ * initialize localStorage with default notes if empty.
  */
 export const initializeNotes = () => {
   if (localStorage.getItem(STORAGE_KEY)) {
@@ -38,3 +38,5 @@ export const initializeNotes = () => {
     saveNotes(defaultNotes); // save default notes
   }
 };
+
+
