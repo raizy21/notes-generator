@@ -13,9 +13,7 @@ const NoteList = () => {
 
   //if empty
   if (notes.length === 0) {
-    return (
-      <p className="text-center text-primary">No notes available. Add one!</p>
-    );
+    return <p className="text-center text-primary">Add notes!</p>;
   }
 
   return (
@@ -23,9 +21,13 @@ const NoteList = () => {
       {notes
         .slice()
         .reverse()
-        .map((note) => (    // reverse notes before rendering
-          <NoteItem key={note.id} note={note} />
-        ))}
+        .map(
+          (
+            note // reverse notes before rendering
+          ) => (
+            <NoteItem key={note.id} note={note} />
+          )
+        )}
     </ul>
   );
 };

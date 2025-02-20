@@ -4,6 +4,8 @@ import { toast } from "react-hot-toast"; //toast for notification
 import { useNotes } from "../context/context"; //  context notes
 
 const NoteItem = ({ note }) => {
+
+  console.log("note :", note);
   const { updateNote } = useNotes(); // edit functionality
   const { removeNote } = useNotes(); // delete functionality
 
@@ -20,16 +22,18 @@ const NoteItem = ({ note }) => {
         <Pen
           note={note}
           onClick={() => {
+            console.log("note:", note.id);
+
             updateNote(note.id);
-            toast.success("Note updated!");
+            toast.success("note updated!");
           }}
         />
         <Trash
           onClick={() => {
             removeNote(note.id);
-            toast.error("Note deleted!");
+            toast.error("note deleted!");
           }}
-          aria-label="Delete Note"
+          aria-label="delete Note"
         />
       </li>
     </div>

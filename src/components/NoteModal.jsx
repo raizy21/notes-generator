@@ -6,10 +6,11 @@ const NoteModal = ({ isOpen, onClose, note, onSave }) => {
   const [content, setContent] = useState(note?.content || ""); //state for content
 
   useEffect(() => {
+    console.log("modal:", note);
     if (note) {
-      setTitle(note.title); //set title for note
-      setImg(note.img); // set img for note
-      setContent(note.content); //set content for note
+      setTitle(note.title || ""); //set title for note
+      setImg(note.img || ""); // set img for note
+      setContent(note.content || ""); //set content for note
     }
   }, [note]); //rendering again after changing
 
@@ -49,7 +50,15 @@ const NoteModal = ({ isOpen, onClose, note, onSave }) => {
           </button>
           <button
             className="btn text-primary"
-            onClick={() => onSave({ id: note.id, title, img, content })}
+            onClick={() => {
+              console.log("note:", {
+                id: note?.id,
+                title,
+                img,
+                content,
+              });
+              onSave({ id: note?.id, title, img, content });
+            }}
           >
             Save
           </button>
