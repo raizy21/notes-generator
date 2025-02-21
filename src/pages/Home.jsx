@@ -31,9 +31,9 @@ const Home = () => {
       </h1>
       <ul className="grid w-full grid-cols-2 ">
         {noteList.length > 0 ? (
-          noteList.map(({ _id, date, title, img, content }, index) => (
+          noteList.map(({ id, date, title, img, content }, index) => (
             <li
-              key={_id}
+              key={id}
               className={` ml-12 mt-12 rounded-2xl w-[90%]
                   ${index % 2 === 0 ? "bg-primary" : "bg-accent"}`}
             >
