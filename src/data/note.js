@@ -8,7 +8,6 @@ export const oneNote = [
       "Fixing all issues requires a structured approach. First, identify the problem and understand its root cause. Prioritize the most urgent and impactful issues. Develop a clear plan to resolve them, then implement and test the solution. Monitor the results to ensure effectiveness and make adjustments if needed. Finally, document the resolution to prevent future occurrences. With a methodical approach, any issue can be successfully resolved.",
   },
 ];
-
 export const notes = [
   {
     id: 1,

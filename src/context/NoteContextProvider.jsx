@@ -8,7 +8,7 @@ const NoteContextProvider = ({ children }) => {
       //saved to local storage
       const savedNotes = localStorage.getItem("notes");
       //accept a empty array if there is no notes
-      return savedNotes ? JSON.parse(savedNotes) : [];  // load from storage or default to []
+      return savedNotes ? JSON.parse(savedNotes) : []; // load from storage or default to []
     } catch (error) {
       console.error("error parsing notes from localStorage:", error);
       return [];
@@ -32,6 +32,7 @@ const NoteContextProvider = ({ children }) => {
       localStorage.setItem("notes", JSON.stringify(updatedNotes)); // save to local storage
       return updatedNotes;
     });
+    window.dispatchEvent(new Event("storage")); // force UI update
   };
   // open modal for editing
   const updateNote = (id) => {

@@ -3,7 +3,7 @@ import { useNotes } from "../context/context"; //context for notes
 
 // export const oneNote = [
 //   {
-//     _id: 1,
+//     id: 1,
 //     date: "2025-23-23",
 //     title: "Fix all issues",
 //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWOkwztu3cUUtP2FK5z2cnUyo2LhEGS0ZPg&s",
@@ -24,7 +24,7 @@ const AddNote = () => {
     if (!newTextNote.trim()) return; // prevent adding empty notes
 
     addNote({
-      _id: Date.now(),
+      id: Date.now(),
       date: new Date().toISOString(),
       title: titleTextNote,
       img: imgTextNote,

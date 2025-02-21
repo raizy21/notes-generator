@@ -13,7 +13,7 @@ const NoteList = () => {
 
   //if empty
   if (notes.length === 0) {
-    return <p className="text-center text-primary">Add notes!</p>;
+    return <p className="text-center text-primary">Notes are empty.Add notes!</p>;
   }
 
   return (

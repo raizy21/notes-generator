@@ -7,12 +7,12 @@ const Home = () => {
   const [noteList, setNoteList] = useState([]);
 
   // load notes on mount
-  useEffect(() => {
-    const notes = getNotes(); // get notes from storage
-    if (notes.length > 0) {
-      setNoteList(notes[0]); // set the first note
-    }
-  }, []);
+  // useEffect(() => {
+  // const notes = getNotes(); // get notes from storage
+  // if (notes.length > 0) {
+  // setNoteList(notes[0]); // set the first note
+  // }
+  // }, []);
 
   //set value from local storage
   useEffect(() => {

@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to='edit' className="btn text-primary mr-12">Edit Notes</Link>
+            <Link to='edit' className="btn text-primary mr-12">ADD or EDIT Notes</Link>
           </li>
         </ul>
       </div>

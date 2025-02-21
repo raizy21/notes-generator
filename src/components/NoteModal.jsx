@@ -1,9 +1,18 @@
 import { useState, useEffect } from "react"; //import useState and useEffect
+import { useNotes } from "../context/context"; //import notes
 
 const NoteModal = ({ isOpen, onClose, note, onSave }) => {
+  const { addNote } = useNotes(); //=import addNote
   const [title, setTitle] = useState(note?.title || ""); //state for title
   const [img, setImg] = useState(note?.img || ""); //state for img
   const [content, setContent] = useState(note?.content || ""); //state for content
+
+  const handleSave = () => {
+    if (!title.trim() || !content.trim()) return; // prevent empty notes
+
+    addNote({ title, img, content }); // add note automatically
+    onClose(); // close the modal
+  };
 
   useEffect(() => {
     console.log("modal:", note);
@@ -58,6 +67,7 @@ const NoteModal = ({ isOpen, onClose, note, onSave }) => {
                 content,
               });
               onSave({ id: note?.id, title, img, content });
+              handleSave;
             }}
           >
             Save
