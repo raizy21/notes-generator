@@ -32,6 +32,10 @@
 
 ##### Any feature you think is interesting!
 
+# Deploy
+
+##### The application as a static site on Render.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
